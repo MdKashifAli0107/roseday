@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://img.freepik.com/free-photo/roses-background_1339-3363.jpg') no-repeat center center/cover;
+            text-align: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            position: relative;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 2px 2px 8px black;
+        }
+        .name-heading {
+            font-size: 55px;
+            font-weight: bold;
+            font-family: 'Great Vibes', cursive;
+            color: #ff1493;
+            text-shadow: 6px 6px 15px rgba(255, 20, 147, 1);
+            margin-bottom: 20px;
+            border: 4px solid rgba(255, 20, 147, 0.8);
+            padding: 15px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        .rose {
+            width: 250px;
+            height: 250px;
+            background: url('https://cms.interiorcompany.com/wp-content/uploads/2024/01/lincoln-red-rose-bush-types.jpg') no-repeat center center/cover;
+            border-radius: 50%;
+            animation: pulse 2s infinite alternate, float 6s infinite ease-in-out;
+            margin: 20px auto;
+            position: relative;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .message {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 30px;
+            font-family: 'Great Vibes', cursive;
+            color: #ffcccc;
+            text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.8);
+        }
+        .romantic-paragraph {
+            font-size: 28px;
+            font-family: 'Dancing Script', cursive;
+            color: #8B0000;
+            text-shadow: 2px 2px 6px rgba(139, 0, 0, 0.8);
+            margin-top: 20px;
+            max-width: 70%;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+        .button {
+            font-size: 24px;
+            font-family: 'Great Vibes', cursive;
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .romantic-button {
+            left: 10%;
+            background: #ff1493;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
+        }
+        .listen-button {
+            right: 10%;
+            background: #ff4500;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+        }
+        .risk-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            padding: 10px 20px;
+            background: #ff0000;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        }
+        .button:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 25px rgba(255, 69, 0, 1);
+        }
+        @keyframes fall {
+            from { transform: translateY(-50px); opacity: 1; }
+            to { transform: translateY(100vh); opacity: 0; }
+        }
+        .love-text {
+            position: absolute;
+            top: -50px;
+            font-size: 24px;
+            font-family: 'Great Vibes', cursive;
+            color: rgba(255, 20, 147, 0.8);
+            animation: fall linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name-heading">My Cutie Patootie Ayeshuuu</div>
+        <div class="rose"></div>
+        <button class="button romantic-button" onclick="window.open('https://www.rwongphoto.com/gallery/flower-pictures/all/', '_blank')">Click here Cutie Pie</button>
+        <button class="button listen-button" onclick="window.open('https://youtu.be/y7tHZ3WeJAw?si=ofhme6usEMSeIoEO', '_blank')">Click here to listen</button>
+        <div class="message">Happy Rose Day for the only Rose in my Life</div>
+        <p class="romantic-paragraph">Phoolon ko kehna khoobsurat bekaar hai, jab phoolon ne khoobsurati aapse liya hai. Aur khushbu toh aajtak us phool me nahi mili jaisi aapse aati hai meri jaan. Aur roses pending rahenge aapke aane tak, ohkayy madam jiii. 💖🌹</p>
+        <button class="button risk-button" onclick="window.open('https://i.pinimg.com/236x/b8/2a/9c/b82a9ca9b651112916cb52efdff7d558.jpg', '_blank')">Open at your own risk</button>
+    </div>
+    <script>
+        function createLoveText() {
+            const love = document.createElement('div');
+            love.classList.add('love-text');
+            love.innerText = 'Love ❤️';
+            document.body.appendChild(love);
+            love.style.left = Math.random() * window.innerWidth + 'px';
+            love.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            setTimeout(() => { love.remove(); }, 5000);
+        }
+        setInterval(createLoveText, 500);
+    </script>
+</body>
+</html>
